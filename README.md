@@ -46,40 +46,26 @@ Python 使用了 wand 依赖
 配置文件 config.json 文档如下
 
 | 属性名             | 默认值 | 可设置的值 | 描述 |
-| ----------------- |:-----:|:--------:|:---:|
+|:-----------------:|:-----:|:--------:|:---:|
 | mark_type         | 1 | 1/2/3 | 标记当前日期的类型 |
-| mark_color        | #ff4d00 and #00ff83 | 16 进制或 rgb(x,x,x) 或 rgba(x,x,x,x) | 标记的颜色 |
+| mark_color        | '#ff4d00' and '#00ff83' | 16 进制/rgb(x,x,x)/rgba(x,x,x,x) | 标记的颜色 |
 | position          | right | left/right | 日历居左或居右(此值设定后不应设定下列 left 和 top 的值) |
-| left              | '' | int值 | 日历距离背景图片左边的像素 |
-| top               | '' | int值 | 日历距离背景图片顶部的像素 |
+| left              |  | 如：'20' | 日历距离背景图片左边的像素 |
+| top               |  | 如：'40' | 日历距离背景图片顶部的像素 |
 | background_image  | 默认背景图 | 图片名称 | 自定义背景图片应放在 wallpaper 文件夹下 |
 
 标记类型
 
 | mark_type 值 | 效果 |
-| ------------ |:---:|
+|:------------:|:---:|
 | 1 | ![type one](./READMEResource/TypeOneMark.jpg) |
 | 2 | ![type two](./READMEResource/TypeTwoMark.jpg) |
 | 3 | ![type three](./READMEResource/TypeThreeMark.jpg) |
 
 ## 配置文件使用示例
 
-**2560x1600 配置文件及效果图**
--------
-``` json
-{
-	"mark_type": "",
-	"mark_color": "",
-	"position": "left",
-	"left": "",
-	"top": "",
-	"background_image": "Leopard.jpg"
-}
-```
-![](./READMEResource/2560.jpg)
-
 **1920x1080 配置文件及效果图**
--------
+
 ``` json
 {
 	"mark_type": "2",
@@ -92,6 +78,20 @@ Python 使用了 wand 依赖
 ```
 ![](./READMEResource/1920.jpg)
 
+**2560x1600 配置文件及效果图**
+
+``` json
+{
+	"mark_type": "",
+	"mark_color": "",
+	"position": "left",
+	"left": "",
+	"top": "",
+	"background_image": "Leopard.jpg"
+}
+```
+![](./READMEResource/2560.jpg)
+
 ## TODO
 
 利用 [crontab](http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/crontab.html) 设置定时任务
@@ -102,9 +102,9 @@ Python 使用了 wand 依赖
 
 ## 参考
 
-* [RayZhao1998 的项目](https://github.com/RayZhao1998/2018_code_calendar_wallpaper_MacOS)(Mac 版)
-* [ttttmr 的项目](https://github.com/ttttmr/2018_code_calendar_wallpaper)(Windows 版)
 * [创意来源](https://www.jianshu.com/p/912ce01d4752)
+* [ttttmr 的项目](https://github.com/ttttmr/2018_code_calendar_wallpaper) (Windows 版)
+* [RayZhao1998 的项目](https://github.com/RayZhao1998/2018_code_calendar_wallpaper_MacOS) (Mac 版)
 
 > 壁纸部分来源以上仓库和网络，如有版权相关，请联系删除
 
