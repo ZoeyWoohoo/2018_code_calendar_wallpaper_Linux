@@ -94,9 +94,19 @@ Python 使用了 wand 依赖
 ```
 ![](./READMEResource/2560.jpg)
 
-## TODO
+## 定时任务
 
-利用 [crontab](http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/crontab.html) 设置定时任务
+利用 [crontab](http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/crontab.html) 设置定时任务，在 Arch 仓库找到了 [gnome-schedule](https://github.com/GNOME/gnome-schedule) 这个图形界面工具，安装默认使用核心仓库 [cronie](https://github.com/cronie-crond/cronie) 版本，使用起来很方便，如下所示，新建一个定时任务即可，每天凌晨运行更新壁纸一次。
+
+![](./READMEResource/ScheduleTask.png)
+
+图中运行命令为 `python` 加上 `calendar.py` 脚本的绝对路径 (最好先将命令在命令行运行一遍，以防止输入错误)，例如我的命令为:
+
+``` bash
+python /home/showzeng/MyFiles/CodeFile/CalendarWallpaper/calendar.py
+```
+
+添加后运行即可。
 
 ## 写在最后
 
