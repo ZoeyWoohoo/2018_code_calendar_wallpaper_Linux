@@ -113,6 +113,7 @@ python /home/showzeng/MyFiles/CodeFile/CalendarWallpaper/calendar.py
 项目起因是因为之前看到 GitHub 上有相应的 Windows 和 Mac 版本，心动不如行动，就写了个 Linux 的实现，并且加入了标记当前日期的特性。
 
 **更新一张自己桌面使用效果**
+
 ![](./READMEResource/Desktop.png)
 
 ## 参考
