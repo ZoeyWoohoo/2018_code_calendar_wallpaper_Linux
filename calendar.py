@@ -1,4 +1,5 @@
 import datetime
+import inspect
 import os
 import json
 
@@ -7,9 +8,12 @@ from wand.image import Image
 from wand.drawing import Drawing
 from wand.color import Color
 
-BASE = os.getcwd()  # now path
+BASE = os.path.dirname(os.path.abspath
+                       (inspect.getfile
+                        (inspect.currentframe())))  # now path
 PDF_SOURCE = BASE + '/2018_code_calendar.pdf[{}]'  # PDF path
 OUTPUT = BASE + '/calendar_wallpaper.jpg'  # new wallpaper
+CONFIG = BASE + '/config.json'  # config file path
 PAGE_OFFSET = 6  # PDF start page
 
 time = datetime.datetime.now()
@@ -31,7 +35,7 @@ LSPY = 895  # Line start point y axis coordinate
 LEPX = 147  # Line end point x axis coordinate
 LEPY = 953  # Line end point y axis coordinate
 
-with open('config.json', 'r') as f:
+with open(CONFIG, 'r') as f:
     config = json.load(f)
 
 if config['background_image'] != '':
@@ -42,13 +46,13 @@ else:
 if config['position'] != "":
     if config['position'] == 'right':
         MARGIN_LEFT = 1100
-        MARGIN_TOP = 60
+        MARGIN_TOP = 20
     else:
         MARGIN_LEFT = 40
-        MARGIN_TOP = 60
+        MARGIN_TOP = 20
 else:
     MARGIN_LEFT = 1100 if (config['left'] == "") else int(config['left'])
-    MARGIN_TOP = 60 if (config['top'] == "") else int(config['top'])
+    MARGIN_TOP = 20 if (config['top'] == "") else int(config['top'])
 
 
 def draw_type_one(draw, width):
